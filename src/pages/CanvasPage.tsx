@@ -1,7 +1,9 @@
 import React from 'react'
 
+import ChessPage from './ChessPage'
+
 import { GRID16 } from '../assets/svg'
-import { Aside, Button, CanvasContainer, Div } from '../components/Layout'
+import { Aside, Box, Button, CanvasContainer, Div } from '../components/Layout'
 import { ElementSlot } from '../components/Interaction'
 import { Rotate } from '../components/effect'
 
@@ -49,7 +51,11 @@ function CavansPage() {
             console.log(data)
           }}
           style={{ height: 600, width: '100%', background: `url(${GRID16})` }}
-        ></main>
+        >
+          <Box width={600} height={600}>
+            <ChessPage knightPosition={[7, 4]} />
+          </Box>
+        </main>
       </CanvasContainer>
     </>
   )

@@ -9,7 +9,10 @@ export const CanvasContainer = styled.div`
   outline: none;
   display: flex;
 `
-
+export const Box = styled.div<{ width: number; height: number }>`
+  width: ${({ width }) => width}px;
+  height: ${({ height }) => height}px;
+`
 export const Div = styled.div``
 
 export const Aside = styled.aside`
