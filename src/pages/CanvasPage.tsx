@@ -53,7 +53,7 @@ function CavansPage() {
           style={{ height: 600, width: '100%', background: `url(${GRID16})` }}
         >
           <Box width={600} height={600}>
-            <ChessPage knightPosition={[7, 4]} />
+            <ChessPage knightPosition={[5, 5]} />
           </Box>
         </main>
       </CanvasContainer>

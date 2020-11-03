@@ -1,26 +1,56 @@
-import React from 'react'
-
+import React, { useState } from 'react'
+import { DndProvider, useDrag, useDrop } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
 function Knight() {
-  return <span style={{ fontSize: '3rem' }}>🦄</span>
+  const [{ isDragging }, drag] = useDrag({
+    item: { type: ItemTypes.KNIGHT, id: 'unicorn' },
+    collect: monitor => ({
+      isDragging: !!monitor.isDragging(),
+    }),
+  })
+  return (
+    <span
+      ref={drag}
+      style={{ fontSize: '3rem', opacity: isDragging ? 0.5 : 1 }}
+    >
+      🦄
+    </span>
+  )
 }
 
 function Square({ black, children }) {
+  const [text, setText] = useState<any>(null)
+  const [{ isOver, didDrop }, drop] = useDrop({
+    accept: ItemTypes.KNIGHT,
+    drop: (item, monitor) => {
+      console.log(item, isOver, didDrop)
+      setText('🐷')
+    },
+    collect: monitor => ({
+      isOver: monitor.isOver(),
+      didDrop: monitor.didDrop(),
+    }),
+  })
+
   const fill = black ? 'black' : 'white'
   const stroke = black ? 'white' : 'black'
 
   return (
     <div
+      ref={drop}
       style={{
-        backgroundColor: fill,
+        fontSize: '2rem',
+        backgroundColor: isOver ? 'red' : fill,
         color: stroke,
         width: '100%',
         height: '100%',
       }}
     >
-      {children}
+      {text || children}
     </div>
   )
 }
+
 function renderSquare(
   i,
   [knightX, knightY]: [knightX: number, knightY: number]
@@ -37,7 +67,9 @@ function renderSquare(
     </div>
   )
 }
-
+export const ItemTypes = {
+  KNIGHT: 'knight',
+}
 function Board({ knightPosition }) {
   const squares: any[] = []
   for (let i = 0; i < 64; i++) {
@@ -45,16 +77,18 @@ function Board({ knightPosition }) {
   }
 
   return (
-    <div
-      style={{
-        width: '100%',
-        height: '100%',
-        display: 'flex',
-        flexWrap: 'wrap',
-      }}
-    >
-      {squares}
-    </div>
+    <DndProvider backend={HTML5Backend}>
+      <div
+        style={{
+          width: '100%',
+          height: '100%',
+          display: 'flex',
+          flexWrap: 'wrap',
+        }}
+      >
+        {squares}
+      </div>
+    </DndProvider>
   )
 }
 
