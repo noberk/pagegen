@@ -7,7 +7,19 @@ import { ElementSlot } from '../components/Interaction'
 function Cavans() {
   return (
     <>
-      <CanvasContainer style={{ height: 600, background: `url(${GRID16})` }}>
+      <CanvasContainer
+        onDragOver={ev => {
+          ev.preventDefault()
+          ev.dataTransfer.dropEffect = 'move'
+        }}
+        onDrop={ev => {
+          ev.preventDefault()
+          // Get the id of the target and add the moved element to the target's DOM
+          const data = ev.dataTransfer.getData('text/plain')
+          console.log(data)
+        }}
+        style={{ height: 600, background: `url(${GRID16})` }}
+      >
         <Aside>
           <div>
             <div>
