@@ -4,7 +4,7 @@ import styled from "styled-components";
 const Span = styled.span`
   &:hover {
     background-color: red;
-    padding: 10px;
+    padding: 1px;
   }
 `;
 

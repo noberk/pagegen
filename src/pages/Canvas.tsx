@@ -11,17 +11,25 @@ function Cavans() {
         <Aside>
           <div>
             <div>
+              <header>Components</header>
               <ElementSlot>
-                <Button>Normal</Button>
+                <Button>Button</Button>
               </ElementSlot>
               <ElementSlot>
-                <Button primary>Primary</Button>
+                <Button>Input</Button>
               </ElementSlot>
             </div>
-            <div></div>
+            <div>
+              <header>Boxes</header>
+              <ElementSlot>
+                <Button primary>Area</Button>
+              </ElementSlot>
+              <ElementSlot>
+                <Button primary>TableArea</Button>
+              </ElementSlot>
+            </div>
           </div>
         </Aside>
-        <Div>123213</Div>
       </CanvasContainer>
     </>
   );
