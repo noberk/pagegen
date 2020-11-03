@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const CanvasContainer = styled.div`
   width: 100%;
@@ -16,12 +16,13 @@ export const Aside = styled.aside`
   background-color: #fff;
   border: 1px solid gray;
   border-radius: 3px;
+  width: 200px;
+  overflow: hidden;
 `
 
 export const Button = styled.button<{ primary?: boolean }>`
-  background: ${(props) => (props.primary ? 'palevioletred' : 'white')};
-  color: ${(props) => (props.primary ? 'white' : 'palevioletred')};
-
+  background: ${props => (props.primary ? 'palevioletred' : 'white')};
+  color: ${props => (props.primary ? 'white' : 'palevioletred')};
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;

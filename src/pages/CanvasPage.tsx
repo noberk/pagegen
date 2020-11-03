@@ -3,6 +3,7 @@ import React from 'react'
 import { GRID16 } from '../assets/svg'
 import { Aside, Button, CanvasContainer, Div } from '../components/Layout'
 import { ElementSlot } from '../components/Interaction'
+import { Rotate } from '../components/effect'
 
 function CavansPage() {
   return (
@@ -28,6 +29,12 @@ function CavansPage() {
                 <Button primary>TableArea</Button>
               </ElementSlot>
             </div>
+            <div>
+              <header>Components</header>
+              <ElementSlot>
+                <Rotate>🦄</Rotate>
+              </ElementSlot>
+            </div>
           </div>
         </Aside>
         <main
@@ -41,7 +48,7 @@ function CavansPage() {
             const data = ev.dataTransfer.getData('text/plain')
             console.log(data)
           }}
-          style={{ height: 600, width:'100%', background: `url(${GRID16})` }}
+          style={{ height: 600, width: '100%', background: `url(${GRID16})` }}
         ></main>
       </CanvasContainer>
     </>
