@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 
-import { GRID16 } from "../assets/svg";
-import { Aside, Button, CanvasContainer, Div } from "../components/Layout";
-import { ElementSlot } from "../components/Interaction";
+import { GRID16 } from '../assets/svg'
+import { Aside, Button, CanvasContainer, Div } from '../components/Layout'
+import { ElementSlot } from '../components/Interaction'
 
 function Cavans() {
   return (
@@ -32,7 +32,7 @@ function Cavans() {
         </Aside>
       </CanvasContainer>
     </>
-  );
+  )
 }
 
-export default Cavans;
+export default Cavans
