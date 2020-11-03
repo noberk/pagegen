@@ -1,5 +1,5 @@
 import React from 'react'
-import CavansPage from './pages/Canvas'
+import CavansPage from './pages/CanvasPage'
 
 function App() {
   return (

@@ -4,22 +4,10 @@ import { GRID16 } from '../assets/svg'
 import { Aside, Button, CanvasContainer, Div } from '../components/Layout'
 import { ElementSlot } from '../components/Interaction'
 
-function Cavans() {
+function CavansPage() {
   return (
     <>
-      <CanvasContainer
-        onDragOver={ev => {
-          ev.preventDefault()
-          ev.dataTransfer.dropEffect = 'move'
-        }}
-        onDrop={ev => {
-          ev.preventDefault()
-          // Get the id of the target and add the moved element to the target's DOM
-          const data = ev.dataTransfer.getData('text/plain')
-          console.log(data)
-        }}
-        style={{ height: 600, background: `url(${GRID16})` }}
-      >
+      <CanvasContainer>
         <Aside>
           <div>
             <div>
@@ -42,9 +30,22 @@ function Cavans() {
             </div>
           </div>
         </Aside>
+        <main
+          onDragOver={ev => {
+            ev.preventDefault()
+            ev.dataTransfer.dropEffect = 'move'
+          }}
+          onDrop={ev => {
+            ev.preventDefault()
+            // Get the id of the target and add the moved element to the target's DOM
+            const data = ev.dataTransfer.getData('text/plain')
+            console.log(data)
+          }}
+          style={{ height: 600, width:'100%', background: `url(${GRID16})` }}
+        ></main>
       </CanvasContainer>
     </>
   )
 }
 
-export default Cavans
+export default CavansPage
