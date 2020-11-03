@@ -1,9 +1,15 @@
-import React from 'react'
-import { CanvasContainer } from '../components/Layout'
-export default () => {
+import React from "react";
+import { GRID16 } from "../assets/svg";
+import { CanvasContainer, Div } from "../components/Layout";
+
+function Cavans() {
   return (
     <>
-      <CanvasContainer>123213</CanvasContainer>
+      <CanvasContainer style={{ height: 600, background: `url(${GRID16})` }}>
+        <Div>123213</Div>
+      </CanvasContainer>
     </>
-  )
+  );
 }
+
+export default Cavans;
