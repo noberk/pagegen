@@ -22,7 +22,16 @@ export const Aside = styled.aside`
   width: 200px;
   overflow: hidden;
 `
-
+export const DashBox = styled.span`
+  width: 50px;
+  height: 50px;
+  border: 1px solid gray;
+  border-style: dashed;
+  display: inline-block;
+`
+export const DashCircle = styled(DashBox)`
+  border-radius: 50%;
+`
 export const Button = styled.button<{ primary?: boolean }>`
   background: ${props => (props.primary ? 'palevioletred' : 'white')};
   color: ${props => (props.primary ? 'white' : 'palevioletred')};
