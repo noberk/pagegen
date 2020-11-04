@@ -1,7 +1,5 @@
 import React from 'react'
-
 import ChessPage from './ChessPage'
-
 import { GRID16 } from '../assets/svg'
 import { Aside, Box, Button, CanvasContainer, Div } from '../components/Layout'
 import { DraggableSpanSlot, ElementSlot } from '../components/Interaction'
