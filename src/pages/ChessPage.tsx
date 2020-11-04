@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
-import { DndProvider, useDrag, useDrop } from 'react-dnd'
-import { HTML5Backend } from 'react-dnd-html5-backend'
+import { useDrag, useDrop } from 'react-dnd'
+import { Button } from '../components/Layout'
+import { DragItemType } from '../constant'
+
 function Knight() {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: ItemTypes.KNIGHT, id: 'unicorn' },
+    item: { type: DragItemType.Emoji, id: 'unicorn' },
     collect: monitor => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -19,12 +21,23 @@ function Knight() {
 }
 
 function Square({ black, children }) {
-  const [text, setText] = useState<any>(null)
+  const [reactNode, setReactNode] = useState<any>(null)
   const [{ isOver, didDrop }, drop] = useDrop({
-    accept: ItemTypes.KNIGHT,
+    accept: [DragItemType.Emoji, DragItemType.Input, DragItemType.Button],
     drop: (item, monitor) => {
-      console.log(item, isOver, didDrop)
-      setText('🐷')
+      console.log(item)
+
+      if (item.type === DragItemType.Emoji) {
+        setReactNode('🐷')
+        return
+      }
+      if (item.type === DragItemType.Input) {
+        setReactNode(<input defaultValue={123} />)
+        return
+      }
+      if (item.type === DragItemType.Button) {
+        setReactNode(<Button primary>Area</Button>)
+      }
     },
     collect: monitor => ({
       isOver: monitor.isOver(),
@@ -46,7 +59,7 @@ function Square({ black, children }) {
         height: '100%',
       }}
     >
-      {text || children}
+      {reactNode || children}
     </div>
   )
 }
@@ -77,18 +90,16 @@ function Board({ knightPosition }) {
   }
 
   return (
-    <DndProvider backend={HTML5Backend}>
-      <div
-        style={{
-          width: '100%',
-          height: '100%',
-          display: 'flex',
-          flexWrap: 'wrap',
-        }}
-      >
-        {squares}
-      </div>
-    </DndProvider>
+    <div
+      style={{
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        flexWrap: 'wrap',
+      }}
+    >
+      {squares}
+    </div>
   )
 }
 

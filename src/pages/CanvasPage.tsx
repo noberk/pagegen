@@ -4,8 +4,9 @@ import ChessPage from './ChessPage'
 
 import { GRID16 } from '../assets/svg'
 import { Aside, Box, Button, CanvasContainer, Div } from '../components/Layout'
-import { ElementSlot } from '../components/Interaction'
+import { DraggableSpanSlot, ElementSlot } from '../components/Interaction'
 import { Rotate } from '../components/effect'
+import { DragItemType } from '../constant'
 
 function CavansPage() {
   return (
@@ -24,12 +25,12 @@ function CavansPage() {
             </div>
             <div>
               <header>Boxes</header>
-              <ElementSlot>
+              <DraggableSpanSlot dragType={DragItemType.Button}>
                 <Button primary>Area</Button>
-              </ElementSlot>
-              <ElementSlot>
-                <Button primary>TableArea</Button>
-              </ElementSlot>
+              </DraggableSpanSlot>
+              <DraggableSpanSlot dragType={DragItemType.Input}>
+                <input defaultValue='aaa'/>
+              </DraggableSpanSlot>
             </div>
             <div>
               <header>Components</header>
