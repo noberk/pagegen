@@ -81,9 +81,7 @@ function renderSquare(
     </div>
   )
 }
-export const ItemTypes = {
-  KNIGHT: 'knight',
-}
+
 function Board({ knightPosition }) {
   const squares: any[] = []
   for (let i = 0; i < 64; i++) {
