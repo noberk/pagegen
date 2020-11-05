@@ -22,6 +22,9 @@ export default function () {
           <DashBox />
         </DraggableSpanSlot>
         <DraggableSpanSlot dragType={DragItemType.Button}>
+          <DashBox style={{width:50,height:50}} />
+        </DraggableSpanSlot>
+        <DraggableSpanSlot dragType={DragItemType.Button}>
           <DashCircle />
         </DraggableSpanSlot>
       </div>

@@ -38,10 +38,7 @@ export const DraggableSpanSlot: FC<DraggableSpanSlot> = ({
     }),
   })
   return (
-    <span
-      ref={drag}
-      style={{ fontSize: '3rem', opacity: isDragging ? 0.5 : 1 }}
-    >
+    <span ref={drag} style={{ opacity: isDragging ? 0.5 : 1 }}>
       {children}
     </span>
   )

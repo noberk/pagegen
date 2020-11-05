@@ -26,8 +26,8 @@ export const Side = styled.aside`
 `
 
 export const DashBox = styled.span`
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border: 1px solid gray;
   border-style: dashed;
   display: inline-block;

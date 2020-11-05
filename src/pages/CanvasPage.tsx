@@ -5,13 +5,11 @@ import Main from './Canvas/Main'
 
 function CavansPage() {
   return (
-    <>
-      <CanvasContainer>
-        <LeftSide />
-        <Main />
-        <Side style={{ width: 120 }} />
-      </CanvasContainer>
-    </>
+    <CanvasContainer>
+      <LeftSide />
+      <Main />
+      <Side style={{ width: 120 }} />
+    </CanvasContainer>
   )
 }
 
