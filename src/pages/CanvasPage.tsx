@@ -1,7 +1,14 @@
 import React from 'react'
 import ChessPage from './ChessPage'
 import { GRID16 } from '../assets/svg'
-import { Aside, Box, Button, CanvasContainer, Div } from '../components/Layout'
+import {
+  Aside,
+  Box,
+  Button,
+  CanvasContainer,
+  DashBox,
+  DashCircle,
+} from '../components/Layout'
 import { DraggableSpanSlot, ElementSlot } from '../components/Interaction'
 import { Rotate } from '../components/effect'
 import { DragItemType } from '../constant'
@@ -14,20 +21,20 @@ function CavansPage() {
           <div>
             <div>
               <header>Components</header>
-              <ElementSlot>
-                <Button>Button</Button>
-              </ElementSlot>
-              <ElementSlot>
-                <Button>Input</Button>
-              </ElementSlot>
-            </div>
-            <div>
-              <header>Boxes</header>
               <DraggableSpanSlot dragType={DragItemType.Button}>
                 <Button primary>Area</Button>
               </DraggableSpanSlot>
               <DraggableSpanSlot dragType={DragItemType.Input}>
-                <input defaultValue='aaa'/>
+                <Button primary>Input</Button>
+              </DraggableSpanSlot>
+            </div>
+            <div>
+              <header>Boxes</header>
+              <DraggableSpanSlot dragType={DragItemType.Button}>
+                <DashBox />
+              </DraggableSpanSlot>
+              <DraggableSpanSlot dragType={DragItemType.Button}>
+                <DashCircle />
               </DraggableSpanSlot>
             </div>
             <div>
