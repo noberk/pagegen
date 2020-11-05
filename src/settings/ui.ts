@@ -1,9 +1,7 @@
-let leftSideWidth = 300
-let rightSideWidth = 150
+let leftSideWidth = 500
+let rightSideWidth = 500
 
-export const PANELS_CONFIG: {
-  [key in string]: React.CSSProperties
-} = {
+export const PANELS_CONFIG = {
   leftSide: {
     width: leftSideWidth,
   },
@@ -17,6 +15,6 @@ export const PANELS_CONFIG: {
     bottom: 0,
   },
   header: {},
-}
+} as const
 
 export type PanelsDefinition = typeof PANELS_CONFIG
