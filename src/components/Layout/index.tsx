@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { visibleHeight } from '../../common/browser'
+import { Fillet } from '../decoratePart'
 
 export const CanvasContainer = styled.div`
   width: 100%;
@@ -35,9 +36,8 @@ export const DashBox = styled.span`
 export const DashCircle = styled(DashBox)`
   border-radius: 50%;
 `
-export const Button = styled.button<{ primary?: boolean }>`
-  background: ${props => (props.primary ? 'palevioletred' : 'white')};
-  color: ${props => (props.primary ? 'white' : 'palevioletred')};
-  border: 2px solid palevioletred;
-  border-radius: 3px;
+
+export const Header = styled.header<{ h: number }>`
+  height: ${({ h }) => h ?? 100}px;
+  ${Fillet as any}
 `

@@ -1,7 +1,15 @@
 import React, { createContext, useContext, useMemo, useState } from 'react'
-import { PanelsDefinition, PANELS_CONFIG } from '../settings/ui'
+import { PanelsDefinition, PANELS_CONFIG, PANELS_CONFIG2 } from '../settings/ui'
 
-const PanelStructureContext = createContext<PanelsDefinition>({} as any)
+let narrow = false
+const PanelStructureContext = createContext<
+  [
+    PanelsDefinition,
+    {
+      toggle(): void
+    }
+  ]
+>({} as any)
 export function usePanelStructure() {
   return useContext(PanelStructureContext)
 }
@@ -9,8 +17,12 @@ export function usePanelStructure() {
 export function PanelStructureContextProvider({ children }) {
   const [state, setState] = useState<PanelsDefinition>(PANELS_CONFIG)
 
+  function toggle() {}
+
   return (
-    <PanelStructureContext.Provider value={state}>
+    <PanelStructureContext.Provider
+      value={useMemo(() => [state, { toggle }], [state, { toggle }])}
+    >
       {children}
     </PanelStructureContext.Provider>
   )
