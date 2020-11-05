@@ -26,13 +26,14 @@ export function useDrawBoardContext() {
 
 export function DrawBoardContextProvider({ children }) {
   const [state, setState] = useState<DrawBoardContextProps>({
-    componentsTree: [<span>🐷</span>],
+    componentsTree: [<span>🐷</span>, <span>🐷</span>],
   })
 
   function push(node: React.ReactNode) {
-    let newArr = { ...state }
-    newArr.componentsTree.push(newArr)
-    setState(newArr)
+    let newArr = [...state.componentsTree]
+    newArr.push(node)
+    state.componentsTree= newArr
+    setState({...state})
   }
 
   return (
