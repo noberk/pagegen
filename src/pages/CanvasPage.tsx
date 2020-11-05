@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
+import { Button } from '../components/basePart'
 import { CanvasContainer, Header, Side } from '../components/Layout'
 import { DragComponentItemType } from '../constants'
 import { usePanelStructure } from '../contexts/PanelStructure'
@@ -7,7 +8,7 @@ import LeftSide from './Canvas/LeftSide'
 import Main from './Canvas/Main'
 
 function CavansPage() {
-  const [panel] = usePanelStructure()
+  const [panel, { toggle }] = usePanelStructure()
   const [{ isOver, didDrop }, drop] = useDrop({
     accept: [DragComponentItemType.Box],
     drop: (item, monitor) => {
@@ -22,7 +23,11 @@ function CavansPage() {
   })
   return (
     <>
-      <Header h={panel.header.height}></Header>
+      <Header h={panel.header.height}>
+        <Button primary onClick={toggle}>
+          Toggle
+        </Button>
+      </Header>
       <CanvasContainer>
         <LeftSide />
         <Main />

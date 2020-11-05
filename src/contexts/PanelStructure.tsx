@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useMemo, useState } from 'react'
+import { isBuffer } from 'util'
 import { PanelsDefinition, PANELS_CONFIG, PANELS_CONFIG2 } from '../settings/ui'
 
 let narrow = false
@@ -17,7 +18,12 @@ export function usePanelStructure() {
 export function PanelStructureContextProvider({ children }) {
   const [state, setState] = useState<PanelsDefinition>(PANELS_CONFIG)
 
-  function toggle() {}
+  function toggle() {
+    console.log(narrow)
+
+    setState(narrow ? { ...PANELS_CONFIG } : { ...PANELS_CONFIG2 })
+    narrow = !narrow
+  }
 
   return (
     <PanelStructureContext.Provider

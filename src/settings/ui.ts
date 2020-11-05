@@ -1,5 +1,5 @@
-let leftSideWidth = 500
-let rightSideWidth = 500
+let leftSideWidth = 300
+let rightSideWidth = 300
 let height1 = 80
 
 export const PANELS_CONFIG = {
@@ -24,16 +24,16 @@ export type PanelsDefinition = typeof PANELS_CONFIG
 
 export const PANELS_CONFIG2 = {
   leftSide: {
-    width: leftSideWidth / 5,
+    width: leftSideWidth / 2,
   },
   rightSide: {
-    width: rightSideWidth / 5,
+    width: rightSideWidth / 2,
   },
   main: {
     left: leftSideWidth,
     top: 0,
-    right: rightSideWidth / 5,
+    right: rightSideWidth / 2,
     bottom: 0,
   },
-  header: { height: height1 / 4 },
+  header: { height: height1 / 1.5 },
 } as const
