@@ -12,6 +12,7 @@ import {
 import { DraggableSpanSlot, ElementSlot } from '../components/Interaction'
 import { Rotate } from '../components/effect'
 import { DragItemType } from '../constant'
+import Draggable from 'react-draggable'
 
 function CavansPage() {
   return (
@@ -46,21 +47,16 @@ function CavansPage() {
           </div>
         </Aside>
         <main
-          onDragOver={ev => {
-            ev.preventDefault()
-            ev.dataTransfer.dropEffect = 'move'
-          }}
-          onDrop={ev => {
-            ev.preventDefault()
-            // Get the id of the target and add the moved element to the target's DOM
-            const data = ev.dataTransfer.getData('text/plain')
-            console.log(data)
-          }}
           style={{ height: 600, width: '100%', background: `url(${GRID16})` }}
         >
-          <Box width={600} height={600}>
+          <Box width={300} height={300}>
             <ChessPage knightPosition={[5, 5]} />
           </Box>
+          <div style={{ width: 600, height: 600, background: 'white' , borderRadius:20 }}>
+            <Draggable>
+              <DashCircle style={{background:'red'}} />
+            </Draggable>
+          </div>
         </main>
       </CanvasContainer>
     </>
