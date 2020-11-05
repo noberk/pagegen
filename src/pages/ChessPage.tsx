@@ -11,10 +11,7 @@ function Knight() {
     }),
   })
   return (
-    <span
-      ref={drag}
-      style={{ fontSize: '3rem', opacity: isDragging ? 0.5 : 1 }}
-    >
+    <span ref={drag} style={{ fontSize: 20, opacity: isDragging ? 0.5 : 1 }}>
       🦄
     </span>
   )
@@ -23,12 +20,16 @@ function Knight() {
 function Square({ black, children }) {
   const [reactNode, setReactNode] = useState<any>(null)
   const [{ isOver, didDrop }, drop] = useDrop({
-    accept: [DragComponentItemType.Emoji, DragComponentItemType.Input, DragComponentItemType.Button],
+    accept: [
+      DragComponentItemType.Emoji,
+      DragComponentItemType.Input,
+      DragComponentItemType.Button,
+    ],
     drop: (item, monitor) => {
       console.log(item)
 
       if (item.type === DragComponentItemType.Emoji) {
-        setReactNode('🐷')
+        setReactNode('🍖')
         return
       }
       if (item.type === DragComponentItemType.Input) {
