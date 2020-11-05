@@ -2,15 +2,18 @@ import React from 'react'
 import { DndProvider } from 'react-dnd'
 import { HTML5Backend } from 'react-dnd-html5-backend'
 import { DrawBoardContextProvider } from './contexts/DrawBoard'
+import { PanelStructureContextProvider } from './contexts/PanelStructure'
 import CavansPage from './pages/CanvasPage'
 
 function App() {
   return (
     <>
       <DndProvider backend={HTML5Backend}>
-        <DrawBoardContextProvider>
-          <CavansPage />
-        </DrawBoardContextProvider>
+        <PanelStructureContextProvider>
+          <DrawBoardContextProvider>
+            <CavansPage />
+          </DrawBoardContextProvider>
+        </PanelStructureContextProvider>
       </DndProvider>
     </>
   )

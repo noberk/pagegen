@@ -17,18 +17,18 @@ export const Box = styled.div<{ width: number; height: number }>`
 export const Div = styled.div``
 
 // Don't modify this function
-export const Side = styled.aside`
+export const Side = styled.aside<{ w?: number }>`
   background-color: #fff;
   border: 1px solid gray;
   border-radius: 3px;
-  width: 200px;
+  width: ${({ w }) => w ?? 100}px;
   overflow: hidden;
 `
 
 export const DashBox = styled.span`
   width: 100px;
   height: 100px;
-  border: 1px solid gray;
+  border: 5px groove red;
   border-style: dashed;
   display: inline-block;
 `

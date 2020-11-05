@@ -3,10 +3,12 @@ import { Rotate } from '../../components/effect'
 import { DraggableSpanSlot, ElementSlot } from '../../components/Interaction'
 import { Button, DashBox, DashCircle, Side } from '../../components/Layout'
 import { DragComponentItemType } from '../../constants'
+import { usePanelStructure } from '../../contexts/PanelStructure'
 
 export default function () {
+  const panel = usePanelStructure()
   return (
-    <Side>
+    <Side w={panel.leftSide.width}>
       <div>
         <header>Components</header>
         <DraggableSpanSlot dragType={DragComponentItemType.Button}>
@@ -22,7 +24,7 @@ export default function () {
           <DashBox />
         </DraggableSpanSlot>
         <DraggableSpanSlot dragType={DragComponentItemType.Box}>
-          <DashBox style={{width:50,height:50}} />
+          <DashBox style={{ width: 50, height: 50 }} />
         </DraggableSpanSlot>
         <DraggableSpanSlot dragType={DragComponentItemType.Any}>
           <DashCircle />
