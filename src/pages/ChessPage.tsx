@@ -1,11 +1,11 @@
 import React, { useState } from 'react'
 import { useDrag, useDrop } from 'react-dnd'
 import { Button } from '../components/Layout'
-import { DragItemType } from '../constant'
+import { DragComponentItemType } from '../constants'
 
 function Knight() {
   const [{ isDragging }, drag] = useDrag({
-    item: { type: DragItemType.Emoji, id: 'unicorn' },
+    item: { type: DragComponentItemType.Emoji, id: 'unicorn' },
     collect: monitor => ({
       isDragging: !!monitor.isDragging(),
     }),
@@ -23,19 +23,19 @@ function Knight() {
 function Square({ black, children }) {
   const [reactNode, setReactNode] = useState<any>(null)
   const [{ isOver, didDrop }, drop] = useDrop({
-    accept: [DragItemType.Emoji, DragItemType.Input, DragItemType.Button],
+    accept: [DragComponentItemType.Emoji, DragComponentItemType.Input, DragComponentItemType.Button],
     drop: (item, monitor) => {
       console.log(item)
 
-      if (item.type === DragItemType.Emoji) {
+      if (item.type === DragComponentItemType.Emoji) {
         setReactNode('🐷')
         return
       }
-      if (item.type === DragItemType.Input) {
+      if (item.type === DragComponentItemType.Input) {
         setReactNode(<input defaultValue={123} />)
         return
       }
-      if (item.type === DragItemType.Button) {
+      if (item.type === DragComponentItemType.Button) {
         setReactNode(<Button primary>Area</Button>)
       }
     },

@@ -2,29 +2,29 @@ import React from 'react'
 import { Rotate } from '../../components/effect'
 import { DraggableSpanSlot, ElementSlot } from '../../components/Interaction'
 import { Button, DashBox, DashCircle, Side } from '../../components/Layout'
-import { DragItemType } from '../../constant'
+import { DragComponentItemType } from '../../constants'
 
 export default function () {
   return (
     <Side>
       <div>
         <header>Components</header>
-        <DraggableSpanSlot dragType={DragItemType.Button}>
+        <DraggableSpanSlot dragType={DragComponentItemType.Button}>
           <Button primary>Area</Button>
         </DraggableSpanSlot>
-        <DraggableSpanSlot dragType={DragItemType.Input}>
+        <DraggableSpanSlot dragType={DragComponentItemType.Input}>
           <Button primary>Input</Button>
         </DraggableSpanSlot>
       </div>
       <div>
         <header>Boxes</header>
-        <DraggableSpanSlot dragType={DragItemType.Button}>
+        <DraggableSpanSlot dragType={DragComponentItemType.Box}>
           <DashBox />
         </DraggableSpanSlot>
-        <DraggableSpanSlot dragType={DragItemType.Button}>
+        <DraggableSpanSlot dragType={DragComponentItemType.Box}>
           <DashBox style={{width:50,height:50}} />
         </DraggableSpanSlot>
-        <DraggableSpanSlot dragType={DragItemType.Button}>
+        <DraggableSpanSlot dragType={DragComponentItemType.Any}>
           <DashCircle />
         </DraggableSpanSlot>
       </div>

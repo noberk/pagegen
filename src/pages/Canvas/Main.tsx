@@ -3,8 +3,11 @@ import Draggable from 'react-draggable'
 import { GRID16 } from '../../assets/svg'
 import { visibleHeight } from '../../common/browser'
 import { Box, DashCircle } from '../../components/Layout'
+import { useDrawBoardContext } from '../../contexts/DrawBoard'
 import ChessPage from '../ChessPage'
 export default function () {
+  const [state] = useDrawBoardContext()
+
   return (
     <main
       style={{
@@ -18,7 +21,8 @@ export default function () {
       </Draggable>
       <Box width={300} height={300}>
         <ChessPage knightPosition={[5, 5]} />
-      </Box>
+      </Box>{' '}
+      {state?.componentsTree}
     </main>
   )
 }
