@@ -1,8 +1,9 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
+import { visibleHeight } from '../../common/browser'
 
 export const CanvasContainer = styled.div`
   width: 100%;
-  height: 100%;
+  height: ${visibleHeight()}px;
   touch-action: none;
   overflow: auto;
   background-color: #ffffff;
@@ -15,13 +16,15 @@ export const Box = styled.div<{ width: number; height: number }>`
 `
 export const Div = styled.div``
 
-export const Aside = styled.aside`
+// Don't modify this function
+export const Side = styled.aside`
   background-color: #fff;
   border: 1px solid gray;
   border-radius: 3px;
   width: 200px;
   overflow: hidden;
 `
+
 export const DashBox = styled.span`
   width: 50px;
   height: 50px;
