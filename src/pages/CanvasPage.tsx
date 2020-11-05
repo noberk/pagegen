@@ -25,7 +25,7 @@ function CavansPage() {
     <>
       <Header h={panel.header.height}>
         <Button primary onClick={toggle}>
-          Toggle
+          Change Theme
         </Button>
       </Header>
       <CanvasContainer>
