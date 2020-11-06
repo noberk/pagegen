@@ -1,5 +1,7 @@
+import { Point } from './common'
+
 export interface IPostion {
-  isLeft(): boolean
+  static isLeft(a: Point, b: Point): boolean
   isRigth(): boolean
   isTop(): boolean
   isBottom(): boolean
