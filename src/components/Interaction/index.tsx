@@ -2,7 +2,6 @@ import React, { FC } from 'react'
 import { useDrag } from 'react-dnd'
 import styled from 'styled-components'
 import { DragComponentItemType } from '../../constants'
-import { rotate } from '../effect'
 
 const Span = styled.span``
 
@@ -11,7 +10,7 @@ export type ElementSlotProps<T = {}> = {
   draggable: boolean
 }
 export type DraggableSpanSlot<T = {}> = {
-  dragType?: DragComponentItemType
+  readonly dragType?: DragComponentItemType
 }
 export const ElementSlot: FC<Partial<ElementSlotProps>> = ({ children }) => {
   return (
