@@ -1,0 +1,506 @@
+{
+	"timestamp": 1604720113548,
+	"data": {
+		"cells": {
+			"7,5": {},
+			"9,3": {},
+			"7,6": {},
+			"9,4": {},
+			"9,5": {},
+			"9,6": {},
+			"2,1": {
+				"controltype": "label",
+				"for": "createBy",
+				"name": "createByLabel",
+				"text": "创建人",
+				"type": "text"
+			},
+			"2,2": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "createBy",
+				"valueType": "java.lang.String",
+				"name": "createBy",
+				"placeholder": "请输入创建人",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入创建人"
+			},
+			"2,3": {
+				"controltype": "label",
+				"for": "createTime",
+				"name": "createTimeLabel",
+				"text": "创建时间",
+				"type": "text"
+			},
+			"4,1": {
+				"controltype": "label",
+				"for": "bargainGoodsName",
+				"name": "bargainGoodsNameLabel",
+				"text": "砍价商品名称",
+				"type": "text"
+			},
+			"2,4": {
+				"field": "createTime",
+				"startedtime": "",
+				"defaultValue": "",
+				"endedtime": "",
+				"controltype": "date",
+				"valueType": "java.util.Date",
+				"name": "createTime",
+				"format": "YYYY-MM-DD",
+				"is_allowClear": false,
+				"placeholder": "请选择创建时间",
+				"type": "date",
+				"guide": "请选择创建时间"
+			},
+			"4,2": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "bargainGoodsName",
+				"valueType": "java.lang.String",
+				"name": "bargainGoodsName",
+				"placeholder": "请输入砍价商品名称",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入砍价商品名称"
+			},
+			"2,5": {
+				"controltype": "label",
+				"for": "updateById",
+				"name": "updateByIdLabel",
+				"text": "修改人id",
+				"type": "text"
+			},
+			"4,3": {
+				"controltype": "label",
+				"for": "bargainGoodsCode",
+				"name": "bargainGoodsCodeLabel",
+				"text": "砍价商品编码",
+				"type": "text"
+			},
+			"6,1": {
+				"controltype": "label",
+				"for": "bargainGoodsOriginalPrice",
+				"name": "bargainGoodsOriginalPriceLabel",
+				"text": "砍价商品原价",
+				"type": "text"
+			},
+			"2,6": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "updateById",
+				"valueType": "java.lang.String",
+				"name": "updateById",
+				"placeholder": "请输入修改人id",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入修改人id"
+			},
+			"4,4": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "bargainGoodsCode",
+				"valueType": "java.lang.String",
+				"name": "bargainGoodsCode",
+				"placeholder": "请输入砍价商品编码",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入砍价商品编码"
+			},
+			"6,2": {
+				"controltype": "text",
+				"defaultValue": "",
+				"propertype": true,
+				"icon": "engineIconFont engine-editor-single-row",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "bargainGoodsOriginalPrice",
+				"valueType": "java.math.BigDecimal",
+				"name": "bargainGoodsOriginalPrice",
+				"placeholder": "请输入砍价商品原价",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": ""
+			},
+			"4,5": {},
+			"6,3": {
+				"controltype": "label",
+				"for": "bargainGoodsFloorPrice",
+				"name": "bargainGoodsFloorPriceLabel",
+				"text": "砍价商品底线价",
+				"type": "text"
+			},
+			"8,1": {
+				"controltype": "label",
+				"for": "bargainGoodsStartTime",
+				"name": "bargainGoodsStartTimeLabel",
+				"text": "商品上架时间",
+				"type": "text"
+			},
+			"4,6": {},
+			"6,4": {
+				"controltype": "text",
+				"defaultValue": "",
+				"propertype": true,
+				"icon": "engineIconFont engine-editor-single-row",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "bargainGoodsFloorPrice",
+				"valueType": "java.math.BigDecimal",
+				"name": "bargainGoodsFloorPrice",
+				"placeholder": "请输入砍价商品底线价",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": ""
+			},
+			"8,2": {
+				"field": "bargainGoodsStartTime",
+				"startedtime": "",
+				"endedtime": "",
+				"controltype": "time",
+				"defaultValue": "",
+				"propertype": true,
+				"valueType": "java.util.Date",
+				"format": "YYYY-MM-DD HH:mm:ss",
+				"name": "bargainGoodsStartTime",
+				"is_allowClear": false,
+				"type": "date",
+				"guide": "请选择商品上架时间"
+			},
+			"6,5": {},
+			"8,3": {
+				"controltype": "label",
+				"for": "bargainGoodsEndTime",
+				"name": "bargainGoodsEndTimeLabel",
+				"text": "商品下架时间",
+				"type": "text"
+			},
+			"6,6": {},
+			"8,4": {
+				"field": "bargainGoodsEndTime",
+				"startedtime": "",
+				"endedtime": "",
+				"controltype": "time",
+				"defaultValue": "",
+				"propertype": true,
+				"valueType": "java.util.Date",
+				"format": "YYYY-MM-DD HH:mm:ss",
+				"name": "bargainGoodsEndTime",
+				"is_allowClear": false,
+				"type": "date",
+				"guide": "请选择商品下架时间"
+			},
+			"8,5": {},
+			"8,6": {},
+			"10,3": {
+				"defaultValue": "",
+				"controltype": "submit",
+				"name": "btnSubmit",
+				"icon": "check",
+				"text": "提交",
+				"type": "button",
+				"guide": ""
+			},
+			"10,4": {
+				"defaultValue": "",
+				"controltype": "reset",
+				"name": "btnReset",
+				"icon": "retweet",
+				"text": "重置",
+				"type": "button",
+				"guide": ""
+			},
+			"10,1": {},
+			"10,2": {
+				"defaultValue": "",
+				"controltype": "tempsubmit",
+				"name": "btnTempSubmit",
+				"icon": "check",
+				"text": "暂存",
+				"type": "button",
+				"guide": ""
+			},
+			"1,1": {
+				"controltype": "label",
+				"for": "id",
+				"name": "idLabel",
+				"text": "主键",
+				"type": "text"
+			},
+			"1,2": {
+				"field": "id",
+				"controltype": "content",
+				"defaultValue": "主键标识",
+				"name": "id",
+				"type": "text",
+				"primarykey": true
+			},
+			"1,3": {
+				"controltype": "label",
+				"for": "formInstanceId",
+				"name": "formInstanceIdLabel",
+				"text": "表单实例编号",
+				"type": "text"
+			},
+			"3,1": {
+				"controltype": "label",
+				"for": "updateBy",
+				"name": "updateByLabel",
+				"text": "修改人",
+				"type": "text"
+			},
+			"1,4": {
+				"instanceid": true,
+				"field": "formInstanceId",
+				"controltype": "content",
+				"defaultValue": "表单实例编号标识",
+				"name": "formInstanceId",
+				"type": "text"
+			},
+			"3,2": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "updateBy",
+				"valueType": "java.lang.String",
+				"name": "updateBy",
+				"placeholder": "请输入修改人",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入修改人"
+			},
+			"1,5": {
+				"controltype": "label",
+				"for": "createById",
+				"name": "createByIdLabel",
+				"text": "创建人id",
+				"type": "text"
+			},
+			"3,3": {
+				"controltype": "label",
+				"for": "updateTime",
+				"name": "updateTimeLabel",
+				"text": "修改时间",
+				"type": "text"
+			},
+			"5,1": {
+				"controltype": "label",
+				"for": "bargainGoodsImage",
+				"name": "bargainGoodsImageLabel",
+				"text": "砍价商品图片",
+				"type": "text"
+			},
+			"1,6": {
+				"maxlength": 255,
+				"defaultValue": "",
+				"controltype": "text",
+				"icon": "",
+				"type": "input",
+				"addonAfter": "",
+				"regex": "",
+				"regexerrmessage": "",
+				"field": "createById",
+				"valueType": "java.lang.String",
+				"name": "createById",
+				"placeholder": "请输入创建人id",
+				"is_allowClear": false,
+				"addonBefore": "",
+				"guide": "请输入创建人id"
+			},
+			"3,4": {
+				"field": "updateTime",
+				"startedtime": "",
+				"defaultValue": "",
+				"endedtime": "",
+				"controltype": "date",
+				"valueType": "java.util.Date",
+				"name": "updateTime",
+				"format": "YYYY-MM-DD",
+				"is_allowClear": false,
+				"placeholder": "请选择修改时间",
+				"type": "date",
+				"guide": "请选择修改时间"
+			},
+			"5,2": {
+				"field": "bargainGoodsImage",
+				"controltype": "image",
+				"valueType": "java.lang.String",
+				"icon": "engineIconFont engine-editor-picture",
+				"name": "bargainGoodsImage",
+				"active": false,
+				"disabled": false,
+				"text": "图片上传",
+				"type": "upload"
+			},
+			"3,5": {},
+			"7,1": {
+				"controltype": "label",
+				"for": "bargainGoodsInventory",
+				"name": "bargainGoodsInventoryLabel",
+				"text": "砍价商品库存",
+				"type": "text"
+			},
+			"5,3": {},
+			"3,6": {},
+			"7,2": {
+				"is_thousandsseparator": false,
+				"defaultValue": "",
+				"controltype": "integer",
+				"propertype": true,
+				"precision": 0,
+				"type": "number",
+				"min": "0",
+				"field": "bargainGoodsInventory",
+				"valueType": "java.lang.Integer",
+				"name": "bargainGoodsInventory",
+				"step": 1,
+				"placeholder": "请输入砍价商品库存",
+				"guide": "请输入砍价商品库存"
+			},
+			"5,4": {},
+			"7,3": {
+				"controltype": "label",
+				"for": "bargainGoodsZeroBuy",
+				"name": "bargainGoodsZeroBuyLabel",
+				"text": "砍价商品0元购人数",
+				"type": "text"
+			},
+			"9,1": {
+				"controltype": "label",
+				"for": "bargainGoodsStatus",
+				"name": "bargainGoodsStatusLabel",
+				"text": "状态",
+				"type": "text",
+				"key": "9,1"
+			},
+			"10,5": {
+				"defaultValue": "",
+				"controltype": "close",
+				"name": "btnClose",
+				"icon": "close",
+				"text": "关闭",
+				"type": "button",
+				"guide": ""
+			},
+			"5,5": {},
+			"7,4": {
+				"is_thousandsseparator": false,
+				"defaultValue": "",
+				"controltype": "integer",
+				"propertype": true,
+				"precision": 0,
+				"type": "number",
+				"min": "0",
+				"field": "bargainGoodsZeroBuy",
+				"valueType": "java.lang.Integer",
+				"name": "bargainGoodsZeroBuy",
+				"step": 1,
+				"placeholder": "请输入砍价商品0元购人数",
+				"guide": "请输入砍价商品0元购人数"
+			},
+			"9,2": {
+				"datasourcetype": "dictionary",
+				"controltype": "single",
+				"icon": "engineIconFont engine-editor-select",
+				"active": false,
+				"type": "select",
+				"local": {
+					"data": [],
+					"columns": []
+				},
+				"dictionary": {
+					"code": "CONTENT_STATUES",
+					"name": "状态",
+					"type": "通用型",
+					"key": "8e1ec545-5f84-4c2b-b42c-8d7ab0110339"
+				},
+				"field": "bargainGoodsStatus",
+				"valueType": "java.lang.String",
+				"name": "bargainGoodsStatus",
+				"disabled": false,
+				"text": "下拉框",
+				"placeholder": "请选择下拉框数据",
+				"key": "9,2"
+			},
+			"10,6": {
+				"defaultValue": "",
+				"controltype": "print",
+				"name": "btnPrint",
+				"icon": "printer",
+				"text": "打印",
+				"type": "button",
+				"guide": ""
+			}
+		},
+		"rows": {
+			"1": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"2": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"3": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"4": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"5": {
+				"column": [6, 9, 7, 1, 1]
+			},
+			"6": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"7": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"8": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"9": {
+				"column": [6, 5, 4, 7, 1, 1]
+			},
+			"10": {
+				"column": [9, 2, 4, 3, 3, 3]
+			}
+		}
+	},
+	"responseCode": 0,
+	"success": true,
+	"errorMsg": null,
+	"message": null
+}

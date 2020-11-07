@@ -36,9 +36,6 @@ export default function () {
         background: `url(${GRID16})`,
       }}
     >
-      <Draggable>
-        <DashCircle style={{ background: 'red' }} />
-      </Draggable>
       <Box width={300} height={300}>
         <ChessPage knightPosition={[5, 5]} />
       </Box>
