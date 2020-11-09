@@ -4,8 +4,9 @@ import { Button } from '../components/BasePart'
 import { CanvasContainer, Header, Side } from '../components/Layout'
 import { DragComponentItemType } from '../constants'
 import { usePanelStructure } from '../contexts/PanelStructure'
-import LeftSide from './Canvas/LeftSide'
+import ComponentPanel from './Canvas/ComponentPanel'
 import Main from './Canvas/Main'
+import PropertyPanel from './Canvas/PropertyPanel'
 
 function CavansPage() {
   const [panel, { toggle }] = usePanelStructure()
@@ -29,9 +30,9 @@ function CavansPage() {
         </Button>
       </Header>
       <CanvasContainer>
-        <LeftSide />
+        <ComponentPanel />
         <Main />
-        <Side w={panel.rightSide.width} />
+        <PropertyPanel />
       </CanvasContainer>
     </>
   )

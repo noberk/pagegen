@@ -19,3 +19,8 @@ interface InherentComponentProps {
   descrition?: string
   children?: InherentComponentProps[]
 }
+
+interface CommonHTMLEvent {
+  onClick: (e) => void
+  onMouseEnter: (e) => void
+}
