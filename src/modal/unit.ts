@@ -9,11 +9,11 @@ import {
 
 export abstract class Unit<D extends {}>
   implements ICommonHTMLEvent, InherentComponentProps<D> {
-  abstract onClick(e: any): void
-  abstract onMouseOver(e: any): void
   public children: InherentComponentProps<D>[] = []
-  style: React.CSSProperties = {}
+  public style: React.CSSProperties = {}
   public abstract descrition: D
+  public abstract onClick(e: any): void
+  public abstract onMouseOver(e: any): void
 
   constructor(
     public id: string = nanoid(),

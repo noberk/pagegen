@@ -2,7 +2,7 @@ import { Component } from 'react'
 import { Unit } from './unit'
 
 export namespace Components {
-  export const Input = new (class InputUnit extends Unit<{
+  export const Rectangle = new (class extends Unit<{
     title: string
     age: number
   }> {
