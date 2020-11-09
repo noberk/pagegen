@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useDrag, useDrop } from 'react-dnd'
-import { Button } from '../components/basePart'
+import { Button } from '../components/BasePart'
 import { DragComponentItemType } from '../constants'
 
 function Knight() {

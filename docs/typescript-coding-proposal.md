@@ -33,21 +33,9 @@ interface Dispose{
 
 }
 
-module City{}
-
-class Bank {
-  //类名称需要大写
-  private bankInfo //🔑类成员需要标记修饰符
-  constructor(public readonly address: string) {
-    //🔑类成员需要标记修饰符
-  }
-  protected getFinancialReport() {} //🔑类成员需要标记修饰符
-  public withdraw() {} //🔑类成员需要标记修饰符
-}
-
-abstract class Element {  //抽象类大写
-  abstract public getLocation()
-}
+module City{} // module
+class Bank {} // class
+abstract class Element {}   // abstract class
 
 
 ```
@@ -98,13 +86,34 @@ function add(a: number, b: number): number {
 }
 ```
 
-## return const type
+## Return const type
 
 ```ts
-function getNameList(){
-  return ['Andrew','Mary']
+function getNameList() {
+  return ['Andrew', 'Mary']
 }
-function getNameList(): readonly string[]{
-    return ['Andrew','Mary']
+function getNameList(): readonly string[] {
+  return ['Andrew', 'Mary']
+}
+```
+
+## Access Modifier
+
+类的字段和方法需要加明确的修饰符
+
+```ts
+class Bank {
+  //类名称需要大写
+  private bankInfo //🔑类成员需要标记修饰符
+  constructor(public readonly address: string) {
+    //🔑类成员需要标记修饰符
+  }
+  protected getFinancialReport() {} //🔑类成员需要标记修饰符
+  public withdraw() {} //🔑类成员需要标记修饰符
+}
+
+abstract class Element {
+  //抽象类大写
+  public abstract getLocation()
 }
 ```

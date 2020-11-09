@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import { visibleHeight } from '../../common/browser'
-import { Fillet } from '../decoratePart'
+import { Fillet } from '../DecoratePart'
 
 export const CanvasContainer = styled.div`
   width: 100%;

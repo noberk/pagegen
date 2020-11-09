@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from '../../components/basePart'
-import { Rotate } from '../../components/effect'
+import { Button } from '../../components/BasePart'
+import { Rotate } from '../../components/Effect'
 import { DraggableSpanSlot, ElementSlot } from '../../components/Interaction'
 import { DashBox, DashCircle, Side } from '../../components/Layout'
 import { DragComponentItemType } from '../../constants'

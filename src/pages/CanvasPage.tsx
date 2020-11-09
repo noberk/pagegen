@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDrop } from 'react-dnd'
-import { Button } from '../components/basePart'
+import { Button } from '../components/BasePart'
 import { CanvasContainer, Header, Side } from '../components/Layout'
 import { DragComponentItemType } from '../constants'
 import { usePanelStructure } from '../contexts/PanelStructure'
