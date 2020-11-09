@@ -24,9 +24,6 @@ export default function () {
         <DraggableSpanSlot dragType={DragComponentItemType.Box}>
           <DashBox />
         </DraggableSpanSlot>
-        <DraggableSpanSlot dragType={DragComponentItemType.Box}>
-          <DashBox style={{ width: 50, height: 50 }} />
-        </DraggableSpanSlot>
         <DraggableSpanSlot dragType={DragComponentItemType.Any}>
           <DashCircle />
         </DraggableSpanSlot>

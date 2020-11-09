@@ -5,3 +5,6 @@ export enum DragComponentItemType {
   Emoji = 'emoji',
   Box = 'containerBox',
 }
+
+
+ 

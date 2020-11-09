@@ -1,3 +1,5 @@
+import { addSyntheticLeadingComment } from 'typescript'
+
 /**
  * Describe a point where HTMLElement e browser.
  * `🈲`Don't extend this interface... otherwise...
@@ -20,7 +22,8 @@ interface InherentComponentProps {
   children?: InherentComponentProps[]
 }
 
-interface CommonHTMLEvent {
-  onClick: (e) => void
-  onMouseEnter: (e) => void
+export interface ICommonHTMLEvent {
+  onClick(e: any): void
+
+  onMouseOver(e: any): void
 }
