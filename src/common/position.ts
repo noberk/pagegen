@@ -1,5 +1,5 @@
-import { Point } from '../interfaces/common'
-import type { ILocate } from '../interfaces/locate'
+import { Point } from '../types/common'
+import type { ILocate } from '../types/locate'
 
 export class Position implements ILocate {
   isLeft(a: Point, b: Point) {

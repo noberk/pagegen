@@ -16,7 +16,7 @@ export interface Rect {
   height: number
 }
 
-interface InherentComponentProps {
+export interface InherentComponentProps {
   style?: React.CSSProperties
   descrition?: string
   children?: InherentComponentProps[]

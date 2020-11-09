@@ -1,5 +1,4 @@
-import React from 'react'
-import type { InherentComponentProps } from '../interfaces/common'
+import type { InherentComponentProps } from '../types/common'
 
 export namespace ExternalComponents {
   export const TableLayout: InherentComponentProps = {

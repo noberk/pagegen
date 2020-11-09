@@ -1,3 +1,4 @@
+import { nanoid } from '../common/idGen'
 import { DragComponentItemType } from '../constants/index'
 import { ICommonHTMLEvent } from './common'
 export class Unit implements ICommonHTMLEvent {
@@ -7,8 +8,8 @@ export class Unit implements ICommonHTMLEvent {
   onMouseOver(e: any): void {
     throw new Error('Method not implemented.')
   }
-  constructor(private id:string){
-
-  }
-  UnitType: DragComponentItemType
+  constructor(
+    private id: string = nanoid(),
+    private unitType: DragComponentItemType = DragComponentItemType.Any
+  ) {}
 }
