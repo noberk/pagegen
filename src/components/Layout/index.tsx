@@ -1,3 +1,4 @@
+import React from 'react'
 import styled from 'styled-components'
 import { visibleHeight } from '../../common/browser'
 import { Fillet } from '../DecoratePart'
@@ -25,7 +26,6 @@ export const Side = styled.aside<{ w?: number }>`
   width: ${({ w }) => w ?? 100}px;
   overflow: hidden;
 `
-
 export const DashBox = styled.span`
   width: 100px;
   height: 100px;

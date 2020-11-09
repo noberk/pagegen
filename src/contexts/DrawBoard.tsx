@@ -5,6 +5,10 @@ import React, {
   useMemo,
   useState,
 } from 'react'
+import Draggable from 'react-draggable'
+import { StyledComponent } from 'styled-components'
+import { DashBox } from '../components/Layout'
+import { Unit } from '../entities/unit'
 
 type DrawBoardContextProps = {
   componentsTree: React.ReactNode[]
@@ -16,6 +20,7 @@ const DrawBoardContext = createContext<
       DrawBoardContextProps,
       {
         push: (node: React.ReactNode) => void
+        addUnit: <D>(unit: Unit<D>) => void
       }
     ]
   >
@@ -35,10 +40,22 @@ export function DrawBoardContextProvider({ children }) {
     state.componentsTree = newArr
     setState({ ...state })
   }
+  function addUnit<D>(unit: Unit<D>) {
+    const Unit = unit.component as typeof React.Component
 
+    push(
+      <Draggable>
+        <Unit style={{ position: 'absolute' }} />
+      </Draggable>
+    )
+    console.log(unit)
+  }
   return (
     <DrawBoardContext.Provider
-      value={useMemo(() => [state, { push }], [state, { push }])}
+      value={useMemo(() => [state, { push, addUnit }], [
+        state,
+        { push, addUnit },
+      ])}
     >
       {children}
     </DrawBoardContext.Provider>

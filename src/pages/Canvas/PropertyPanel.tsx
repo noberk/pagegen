@@ -7,6 +7,7 @@ export default function () {
   const [panel, { toggle }] = usePanelStructure()
   return (
     <Side w={panel.rightSide.width}>
+      id : ?
       <div>
         <header>Event</header>
         <div>
@@ -18,6 +19,24 @@ export default function () {
         </div>
         <div>
           <input type="text" />
+        </div>
+      </div>
+      <div>
+        <header>properties</header>
+        <div></div>
+        <div>
+          <div>
+            top: <input type="text" />{' '}
+          </div>
+          <div>
+            left: <input type="text" />
+          </div>
+          <div>
+            width: <input type="text" />
+          </div>
+          <div>
+            height: <input type="text" />
+          </div>
         </div>
       </div>
     </Side>

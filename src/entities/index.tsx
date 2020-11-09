@@ -1,8 +1,9 @@
 import { Component } from 'react'
 import { DashBox } from '../components/Layout'
+import { DragComponentItemType } from '../constants'
 import { Unit } from './unit'
 
-export const Rectangle = new class extends Unit<{
+export const Rectangle = new (class extends Unit<{
   title: string
   age: number
 }> {
@@ -13,7 +14,7 @@ export const Rectangle = new class extends Unit<{
     age: 5,
   }
   public component = DashBox
-}
+})()
 
 //   export const Button = new (class InputUnit extends Unit {
 //     onClick(e: any): void {
@@ -31,3 +32,5 @@ export const Rectangle = new class extends Unit<{
 //   title: '123',
 //   age: 5,
 // }
+
+function createUnit(type: DragComponentItemType) {}

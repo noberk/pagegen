@@ -6,7 +6,7 @@ import { visibleHeight } from '../../common/browser'
 import { Box } from '../../components/Layout'
 import { DragComponentItemType } from '../../constants'
 import { useDrawBoardContext } from '../../contexts/DrawBoard'
-import { Rectangle } from '../../modal'
+import { Rectangle } from '../../entities'
 import ChessPage from '../ChessPage'
 
 export default function () {
@@ -15,13 +15,14 @@ export default function () {
     accept: [DragComponentItemType.Box],
     drop: item => {
       if (item.type === DragComponentItemType.Box) {
-        console.log(item)
+        console.log(Rectangle.component)
 
-        methods?.push(
-          <Draggable>
-            <Rectangle.component />
-          </Draggable>
-        )
+        // methods?.push(
+        //   <Draggable>
+        //     <Rectangle.component/>
+        //   </Draggable>
+        // )
+        methods?.addUnit(Rectangle)
       }
     },
     collect: monitor => ({
@@ -38,9 +39,9 @@ export default function () {
         background: `url(${GRID16})`,
       }}
     >
-      <Box width={300} height={300}>
+      {/* <Box width={300} height={300}>
         <ChessPage knightPosition={[5, 5]} />
-      </Box>
+      </Box> */}
 
       {state?.componentsTree}
     </main>
