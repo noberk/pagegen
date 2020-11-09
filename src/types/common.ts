@@ -16,11 +16,12 @@ export interface Rect {
   height: number
 }
 
-export interface InherentComponentProps<D = {}> {
+export interface IInherentComponentProps<D = {}> {
   style: React.CSSProperties
   descrition: D
-  children: InherentComponentProps<D>[]
+  children: IInherentComponentProps<D>[]
   point: Point
+  component: React.ReactNode
 }
 
 export interface ICommonHTMLEvent {
@@ -28,6 +29,3 @@ export interface ICommonHTMLEvent {
 
   onMouseOver(e: any): void
 }
-
-
-

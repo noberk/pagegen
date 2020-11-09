@@ -3,13 +3,14 @@ import { nanoid } from '../common/idGen'
 import { DragComponentItemType } from '../constants/index'
 import {
   ICommonHTMLEvent,
-  InherentComponentProps,
+  IInherentComponentProps,
   Point,
 } from '../types/common'
 
 export abstract class Unit<D extends {}>
-  implements ICommonHTMLEvent, InherentComponentProps<D> {
-  public children: InherentComponentProps<D>[] = []
+  implements ICommonHTMLEvent, IInherentComponentProps<D> {
+  public abstract component: React.ReactNode
+  public children: IInherentComponentProps<D>[] = []
   public style: React.CSSProperties = {}
   public abstract descrition: D
   public abstract onClick(e: any): void
