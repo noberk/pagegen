@@ -18,7 +18,19 @@ export abstract class Unit<P = {}>
   public abstract props: P
   public abstract onClick(e: any): void
   public abstract onMouseOver(e: any): void
-
+  // costomEvents = {
+  //   onClick: [
+  //     {/定义行为
+  //       actions:[{  targetId: '133rwef',},{ targetId: '1ww3rwef'}],
+  //       execet: 'javascript;'
+  //   ],
+  //   onMouseOver: [
+  //     {
+  //       targetId: '133rwef',
+  //       act: function () {},
+  //     },
+  //   ],
+  // }
   constructor(
     public id: string = nanoid(),
     public unitType: DragComponentItemType = DragComponentItemType.Any

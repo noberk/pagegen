@@ -15,3 +15,10 @@ Recoil
 
 Jest
 https://jestjs.io/docs/en/tutorial-react
+
+
+1 git仓库✔
+2 脚手架 ✔
+3 小样 ✔
+4 代码规范 ✔
+5综合文档和产品同步 待定

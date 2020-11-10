@@ -5,7 +5,7 @@ export const unitDefaultStyle: Record<
   React.CSSProperties
 > = {
   [DragComponentItemType.Box]: {
-    width: 100,
+    width: 200,
     height: 100,
     position: 'absolute',
     left: 0,

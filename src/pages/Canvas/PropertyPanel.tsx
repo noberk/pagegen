@@ -9,7 +9,8 @@ export default function () {
   const [state, methods] = useDrawBoardContext()
 
   const unitData = methods?.getSelectItem()[0]
-
+  console.log('property panel',unitData);
+  
   return (
     <Side w={panel.rightSide.width}>
       id : {unitData?.id ?? ''}
