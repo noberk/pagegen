@@ -38,7 +38,7 @@ export function DrawBoardContextProvider({ children }) {
     // because of  draggable components. workaround sets the position = 'absolute'
     push(
       <Draggable>
-        <Unit style={{ position: 'absolute' }} />
+        <Unit style={unit.style} />
       </Draggable>
     )
     console.log(unit)

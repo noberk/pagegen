@@ -12,11 +12,10 @@ import ChessPage from '../ChessPage'
 export default function () {
   const [state, methods] = useDrawBoardContext()
   const [, drop] = useDrop({
-    accept: [DragComponentItemType.Box],
+    accept: [DragComponentItemType.Box, DragComponentItemType.Circle],
     drop: item => {
       if (item.type === DragComponentItemType.Box) {
         console.log(Rectangle)
-
         methods?.addUnit(Rectangle)
       }
     },
@@ -30,6 +29,7 @@ export default function () {
       ref={drop}
       style={{
         height: visibleHeight(),
+        position: 'relative',
         width: '100%',
         background: `url(${GRID16})`,
       }}
