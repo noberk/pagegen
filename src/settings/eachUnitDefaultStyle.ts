@@ -15,4 +15,5 @@ export const unitDefaultStyle: Record<
   [DragComponentItemType.Any]: {},
   [DragComponentItemType.Input]: {},
   [DragComponentItemType.Button]: {},
+  [DragComponentItemType.Circle]: {},
 }

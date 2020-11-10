@@ -1,9 +1,4 @@
-import React, {
-  createContext,
-  useContext,
-  useMemo,
-  useState,
-} from 'react'
+import React, { createContext, useContext, useMemo, useState } from 'react'
 import Draggable from 'react-draggable'
 import { Unit } from '../entities/unit'
 
@@ -17,7 +12,7 @@ const DrawBoardContext = createContext<
       DrawBoardContextProps,
       {
         push: (node: React.ReactNode) => void
-        addUnit: <D>(unit: Unit<D>) => void
+        addUnit: <P>(unit: Unit<P>) => void
       }
     ]
   >
@@ -40,6 +35,7 @@ export function DrawBoardContextProvider({ children }) {
   function addUnit<D>(unit: Unit<D>) {
     const Unit = unit.component as typeof React.Component
 
+    // because of  draggable components. workaround sets the position = 'absolute'
     push(
       <Draggable>
         <Unit style={{ position: 'absolute' }} />

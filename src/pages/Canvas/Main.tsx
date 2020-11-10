@@ -15,13 +15,8 @@ export default function () {
     accept: [DragComponentItemType.Box],
     drop: item => {
       if (item.type === DragComponentItemType.Box) {
-        console.log(Rectangle.component)
+        console.log(Rectangle)
 
-        // methods?.push(
-        //   <Draggable>
-        //     <Rectangle.component/>
-        //   </Draggable>
-        // )
         methods?.addUnit(Rectangle)
       }
     },

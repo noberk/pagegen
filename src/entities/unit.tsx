@@ -20,8 +20,8 @@ export abstract class Unit<P extends {}>
   public abstract onMouseOver(e: any): void
 
   constructor(
-    public id: string = nanoid(),
-    public unitType: DragComponentItemType = DragComponentItemType.Any
+    protected id: string = nanoid(),
+    protected unitType: DragComponentItemType = DragComponentItemType.Any
   ) {}
 
   get point(): Point {
