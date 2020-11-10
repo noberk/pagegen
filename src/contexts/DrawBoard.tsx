@@ -1,13 +1,10 @@
 import React, {
   createContext,
   useContext,
-  useEffect,
   useMemo,
   useState,
 } from 'react'
 import Draggable from 'react-draggable'
-import { StyledComponent } from 'styled-components'
-import { DashBox } from '../components/Layout'
 import { Unit } from '../entities/unit'
 
 type DrawBoardContextProps = {

@@ -16,10 +16,10 @@ export interface Rect {
   height: number
 }
 
-export interface IInherentComponentProps<D = {}> {
+export interface IInherentComponentProps<P = {}> {
   style: React.CSSProperties
-  descrition: D
-  children: IInherentComponentProps<D>[]
+  props: P
+  children: IInherentComponentProps<P>[]
   point: Point
   component: React.ReactNode
 }

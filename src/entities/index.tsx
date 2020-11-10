@@ -1,15 +1,15 @@
-import { Component } from 'react'
 import { DashBox } from '../components/Layout'
 import { DragComponentItemType } from '../constants'
 import { Unit } from './unit'
 
+// here must be multiple instances not a Singleton
 export const Rectangle = new (class extends Unit<{
   title: string
   age: number
 }> {
   onClick(e: any): void {}
   onMouseOver(e: any): void {}
-  public descrition: { title: string; age: number } = {
+  public props: { title: string; age: number } = {
     title: '123',
     age: 5,
   }
@@ -32,5 +32,3 @@ export const Rectangle = new (class extends Unit<{
 //   title: '123',
 //   age: 5,
 // }
-
-function createUnit(type: DragComponentItemType) {}

@@ -7,12 +7,15 @@ import {
   Point,
 } from '../types/common'
 
-export abstract class Unit<D extends {}>
-  implements ICommonHTMLEvent, IInherentComponentProps<D> {
+/**
+ * 单元信息, 用于描述画布上的每一个独立单位
+ */
+export abstract class Unit<P extends {}>
+  implements ICommonHTMLEvent, IInherentComponentProps<P> {
   public abstract component: React.ReactNode
-  public children: IInherentComponentProps<D>[] = []
+  public children: IInherentComponentProps<P>[] = []
   public style: React.CSSProperties = {}
-  public abstract descrition: D
+  public abstract props: P
   public abstract onClick(e: any): void
   public abstract onMouseOver(e: any): void
 
