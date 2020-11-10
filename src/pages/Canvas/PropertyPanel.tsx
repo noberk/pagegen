@@ -1,13 +1,18 @@
 import React from 'react'
 
 import { Side } from '../../components/Layout'
+import { useDrawBoardContext } from '../../contexts/DrawBoard'
 import { usePanelStructure } from '../../contexts/PanelStructure'
 
 export default function () {
   const [panel, { toggle }] = usePanelStructure()
+  const [state, methods] = useDrawBoardContext()
+
+  const unitData = methods?.getSelectItem()[0]
+
   return (
     <Side w={panel.rightSide.width}>
-      id : ?
+      id : {unitData?.id ?? ''}
       <div>
         <header>Event</header>
         <div>
@@ -26,16 +31,16 @@ export default function () {
         <div></div>
         <div>
           <div>
-            top: <input type="text" />{' '}
+            top: <input type="text" value={unitData?.style.top ?? 0} />{' '}
           </div>
           <div>
-            left: <input type="text" />
+            left: <input type="text" value={unitData?.style.left ?? 0} />
           </div>
           <div>
-            width: <input type="text" />
+            width: <input type="text" value={unitData?.style.width ?? 0} />
           </div>
           <div>
-            height: <input type="text" />
+            height: <input type="text" value={unitData?.style.height ?? 0} />
           </div>
         </div>
       </div>

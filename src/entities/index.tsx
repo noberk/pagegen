@@ -20,6 +20,7 @@ export const Rectangle = new (class extends Unit<{
     this.style = unitDefaultStyle[this.unitType]
   }
   public component = DashBox
+  public point = { x: 0, y: 0 }
 })()
 
 // export const Circle = new (class extends Unit<{

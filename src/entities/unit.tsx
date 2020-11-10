@@ -10,7 +10,7 @@ import {
 /**
  * 单元信息, 用于描述画布上的每一个独立单位
  */
-export abstract class Unit<P extends {}>
+export abstract class Unit<P = {}>
   implements ICommonHTMLEvent, IInherentComponentProps<P> {
   public abstract component: React.ReactNode
   public children: IInherentComponentProps<P>[] = []
@@ -20,11 +20,9 @@ export abstract class Unit<P extends {}>
   public abstract onMouseOver(e: any): void
 
   constructor(
-    protected id: string = nanoid(),
-    protected unitType: DragComponentItemType = DragComponentItemType.Any
+    public id: string = nanoid(),
+    public unitType: DragComponentItemType = DragComponentItemType.Any
   ) {}
 
-  get point(): Point {
-    return cssHelper.getPointFromCSS(this.style)
-  }
+  public abstract point: Point
 }

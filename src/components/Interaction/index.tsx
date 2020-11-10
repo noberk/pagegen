@@ -1,5 +1,6 @@
 import React, { FC } from 'react'
 import { useDrag } from 'react-dnd'
+import Draggable from 'react-draggable'
 import styled from 'styled-components'
 import { DragComponentItemType } from '../../constants'
 
@@ -41,4 +42,8 @@ export const DraggableSpanSlot: FC<DraggableSpanSlot> = ({
       {children}
     </span>
   )
+}
+export const InteractiveBox: FC<{}> = props => {
+  const { children } = props
+  return <Draggable>{children}</Draggable>
 }
